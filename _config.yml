@@ -3,8 +3,8 @@ author:
   name: Mohamed-Shabeer-KP
   email: mohamedshabeerkp@gmail.com
 
-description: >
-  I builded the resume let me test it
+# description: >
+#   My Personal Resume
 
 remote_theme: "jekyll/minima@1e8a445"
 
