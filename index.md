@@ -52,7 +52,7 @@ Tools: Git, Azure DevOps, Docker
 
 ## Education
 
-Master’s Degree in Computer Applications 
+Master’s Degree in Computer Applications
 [Amrita University](https://www.amrita.edu/)
 
 
