@@ -52,15 +52,15 @@ Tools: Git, Azure DevOps, Docker
 
 ## Education
 
-Master’s Degree in Computer Applications
+Master’s Degree in Computer Applications  
 [Amrita University](https://www.amrita.edu/)
 
 
 ## Certifications
 
-AI-Assisted Developer 
-AI-900 (Azure AI Fundamentals) 
-AZ-204 (Azure Developer Associate)
+AI-Assisted Developer  
+AI-900 (Azure AI Fundamentals)  
+AZ-204 (Azure Developer Associate)  
 
 
 
