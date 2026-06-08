@@ -31,15 +31,30 @@ March 2021 – September 2021
 - Learned REST API development, debugging, and application deployment practices  
 
 
-## Projects
-
-### Package Upgrade and Vulnerability Fix  
-- Used an AI tool to identify outdated NuGet packages in a .NET project  
-- Upgraded dependencies and resolved security vulnerabilities  
+## Projects & Contributions
 
 ### REST API Development  
-- Built APIs using ASP.NET Core  
-- Implemented validation, logging, and structured error handling  
+- Designed and developed RESTful APIs using ASP.NET Core  
+- Implemented input validation, structured logging, and centralized error handling  
+- Followed clean architecture principles for maintainable and scalable code  
+- Tested endpoints using Postman and integrated them with frontend services  
+
+### Package Upgrade and Vulnerability Fix  
+- Used an AI tool to identify outdated and vulnerable NuGet packages in a .NET project  
+- Upgraded dependencies to secure versions while ensuring compatibility  
+- Eliminated security vulnerabilities reported during code analysis  
+- Verified fixes using build validation and testing workflows  
+
+### Unit Testing and Code Quality  
+- Developed unit tests using xUnit to improve code reliability and coverage  
+- Used SonarQube to analyze code quality, detect bugs, and enforce best practices  
+- Reduced code smells and improved maintainability through continuous analysis  
+
+### Source Control and CI/CD Pipeline  
+- Managed source code using Azure Repos with proper branching strategies  
+- Configured CI/CD pipelines in Azure DevOps for automated build and deployment  
+- Integrated code quality checks and test execution into the pipeline  
+- Enabled faster and consistent delivery through automated workflows  
 
 
 ## Skills
@@ -52,16 +67,14 @@ Tools: Git, Azure DevOps, Docker
 
 ## Education
 
-Master’s Degree in Computer Applications  
-[Amrita University](https://www.amrita.edu/)
+Master’s Degree in Computer Applications, [Amrita University](https://www.amrita.edu/), 2021
 
 
 ## Certifications
 
-AI-Assisted Developer  
-AI-900 (Azure AI Fundamentals)  
-AZ-204 (Azure Developer Associate)  
-
+- AI-Assisted Developer  
+- AI-900 (Azure AI Fundamentals)  
+- AZ-204 (Azure Developer Associate)  
 
 
 ## Additional Information
