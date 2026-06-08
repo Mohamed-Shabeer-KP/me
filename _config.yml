@@ -50,10 +50,10 @@ minima:
   #       * url      Full URL of social profile.
   social_links:
     - title: Gihub Profile
-      icon: square-github
+      icon: github
       url: "https://github.com/Mohamed-Shabeer-KP"
     - title: LinkedIn Profile
-      icon: linkedin
+      icon: linkedin-in
       url: "https://www.linkedin.com/in/mohamed-shabeer-kp/"
 
   #   Hide syndication feed subscription link.
