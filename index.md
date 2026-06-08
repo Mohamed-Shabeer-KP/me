@@ -1,8 +1,3 @@
----
-layout: home
-title: Mohamed Shabeer K P
----
-
 Mohamed Shabeer K P  
 Software Engineer  
 Kochi, Kerala  
