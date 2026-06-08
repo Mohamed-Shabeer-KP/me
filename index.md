@@ -1,71 +1,72 @@
-# Mohamed Shabeer K P  
-**Software Engineer**
+---
+layout: home
+title: Mohamed Shabeer K P
+---
 
-📍 Kochi, Kerala  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
+Mohamed Shabeer K P  
+Software Engineer  
+Kochi, Kerala  
+
+your.email@example.com  
+https://linkedin.com/in/yourprofile  
+https://github.com/yourusername  
 
 ---
 
-## 👨‍💻 Summary
-Experienced Software Engineer with a strong background in .NET development, building scalable applications, and improving system performance. Skilled in leveraging AI tools to enhance development productivity, resolve vulnerabilities, and modernize legacy systems.
+## About
+
+Software Engineer with experience in .NET development, building scalable applications, and improving software quality. Strong focus on writing clean, maintainable code and leveraging AI tools to improve productivity and security.
 
 ---
 
-## 🛠️ Skills
-- **Languages:** C#, JavaScript, TypeScript  
-- **Frameworks:** .NET Core, ASP.NET MVC, Web API  
-- **Frontend:** React, HTML, CSS  
-- **Databases:** SQL Server, PostgreSQL  
-- **Tools:** Git, Azure DevOps, Docker  
-- **Other:** API Development, Microservices, AI-assisted coding
-
----
-
-## 💼 Experience
+## Experience
 
 ### Software Engineer — Cognizant  
-*Location: Kochi | Duration: YYYY – Present*
+Kochi, Kerala  
+YYYY – Present  
 
-- Developed and maintained enterprise-grade .NET applications.  
-- Improved application performance and reduced response time through code optimization.  
-- Used AI tools to identify and upgrade vulnerable packages, enhancing application security.  
-- Collaborated with cross-functional teams to deliver high-quality solutions.
-
----
-
-## 🚀 Projects
-
-### 🔹 Package Vulnerability Fix (AI-Assisted)
-- Used an AI tool to identify outdated and vulnerable NuGet packages in a .NET project.  
-- Successfully upgraded dependencies and resolved all security issues.
-
-### 🔹 API Development
-- Designed RESTful APIs using ASP.NET Core.  
-- Implemented validation, logging, and error handling for robust services.
+- Developed and maintained enterprise applications using .NET technologies  
+- Improved performance and reliability through code optimization and refactoring  
+- Identified and resolved security vulnerabilities by upgrading outdated dependencies  
+- Collaborated with cross-functional teams to deliver production-ready solutions  
 
 ---
 
-## 🎓 Education
-**Bachelor’s Degree in [Your Field]**  
-[Your University Name]
+## Projects
+
+### Package Upgrade and Vulnerability Fix  
+- Used an AI tool to identify outdated NuGet packages in a .NET project  
+- Upgraded dependencies and resolved security vulnerabilities  
+
+### REST API Development  
+- Built APIs using ASP.NET Core  
+- Implemented validation, logging, and structured error handling  
 
 ---
 
-## 📜 Certifications
-- AI-Assisted Developer Certification (Intermediate)  
-- [Add more certifications if any]
+## Skills
+
+Languages: C#, JavaScript  
+Frameworks: .NET Core, ASP.NET MVC, Web API  
+Databases: SQL Server, PostgreSQL  
+Tools: Git, Azure DevOps, Docker  
 
 ---
 
-## 📈 Achievements
-- Improved code quality and reduced defects using modern development practices.  
-- Successfully delivered multiple projects within tight deadlines.
+## Education
+
+Bachelor’s Degree in [Your Field]  
+[Your University Name]  
 
 ---
 
-## 🤝 Interests
-- Exploring AI in software development  
-- Learning new technologies  
-- Open-source contribution
-``
+## Certifications
+
+AI-Assisted Developer – Intermediate  
+
+---
+
+## Additional Information
+
+- Experience with AI-assisted development workflows  
+- Interest in software architecture and system design  
