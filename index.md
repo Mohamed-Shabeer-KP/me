@@ -1,4 +1,3 @@
-Mohamed Shabeer K P  
 Software Engineer  
 Kochi, Kerala  
 
