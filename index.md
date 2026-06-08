@@ -54,15 +54,23 @@ March 2021 – September 2021
 - Managed source code using Azure Repos with proper branching strategies  
 - Configured CI/CD pipelines in Azure DevOps for automated build and deployment  
 - Integrated code quality checks and test execution into the pipeline  
-- Enabled faster and consistent delivery through automated workflows  
+- Enabled faster and consistent delivery through automated workflows
+
+### AI-Assisted Development Workflow  
+- Utilized Claude AI and Windsurf for code generation, debugging, and refactoring  
+- Accelerated development by generating boilerplate code and resolving issues efficiently  
+- Applied AI assistance for performance optimization and best practice recommendations  
 
 
 ## Skills
 
-Languages: C#, JavaScript  
+Languages: C#, JavaScript, TypeScript  
 Frameworks: .NET Core, ASP.NET MVC, Web API  
+Frontend: HTML, CSS, React  
 Databases: SQL Server, PostgreSQL  
-Tools: Git, Azure DevOps, Docker  
+Tools: Git, Azure Repos, Azure DevOps, Docker, SonarQube, Postman
+Testing: xUnit, Unit Testing, API Testing
+AI Tools: Claude AI, Windsurf (AI-assisted development, debugging, refactoring)  
 
 
 ## Education
