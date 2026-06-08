@@ -1,9 +1,9 @@
 Software Engineer  
 Kochi, Kerala  
 
-your.email@example.com  
-https://linkedin.com/in/yourprofile  
-https://github.com/yourusername  
+mohamedshabeerkp@gmail.com  
+[LinkedIn](https://www.linkedin.com/in/mohamed-shabeer-kp/)
+[Github](https://github.com/Mohamed-Shabeer-KP)
 
 ---
 
