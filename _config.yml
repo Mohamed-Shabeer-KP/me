@@ -52,6 +52,6 @@ minima:
     - title: Resume
       icon: github
       url: "https://github.com/Mohamed-Shabeer-KP"
-    # - title: Jekyll at X (formerly Twitter)
-    #   icon: x-twitter
-    #   url: "https://x.com/jekyllrb"
+    - title: Jekyll at X (formerly Twitter)
+      icon: x-twitter
+      url: "https://x.com/jekyllrb"
