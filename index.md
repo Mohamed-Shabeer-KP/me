@@ -14,12 +14,21 @@ Software Engineer with experience in .NET development, building scalable applica
 
 ### Software Engineer — Cognizant  
 Kochi, Kerala  
-YYYY – Present  
+September 2021 – Present  
 
 - Developed and maintained enterprise applications using .NET technologies  
 - Improved performance and reliability through code optimization and refactoring  
 - Identified and resolved security vulnerabilities by upgrading outdated dependencies  
 - Collaborated with cross-functional teams to deliver production-ready solutions  
+
+### Intern — Cognizant
+Kochi, Kerala  
+March 2021 – September 2021  
+
+- Trained as a Full Stack Engineer with a focus on .NET technologies  
+- Gained hands-on experience in building web applications using ASP.NET MVC and .NET Core  
+- Developed UI components using HTML, CSS, and JavaScript  
+- Learned REST API development, debugging, and application deployment practices  
 
 
 ## Projects
@@ -43,13 +52,16 @@ Tools: Git, Azure DevOps, Docker
 
 ## Education
 
-Bachelor’s Degree in [Your Field]  
-[Your University Name]  
+Master’s Degree in Computer Applications 
+[Amrita University](https://www.amrita.edu/)
 
 
 ## Certifications
 
-AI-Assisted Developer – Intermediate  
+AI-Assisted Developer 
+AI-900 (Azure AI Fundamentals) 
+AZ-204 (Azure Developer Associate)
+
 
 
 ## Additional Information
