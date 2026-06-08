@@ -1,9 +1,6 @@
 Software Engineer  
 Kochi, Kerala  
 
-mohamedshabeerkp@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/mohamed-shabeer-kp/) | [Github](https://github.com/Mohamed-Shabeer-KP)
-
 
 ## About
 
