@@ -24,8 +24,19 @@
 <script>
 function downloadPDF() {
 
-  // ✅ Clone full page
   const element = document.body.cloneNode(true);
+
+  // ✅ Remove grey bar (IMPORTANT FIX)
+  const header = element.querySelector('.site-header');
+  if (header) {
+    header.style.borderTop = 'none';
+    header.style.borderBottom = 'none';
+    header.style.boxShadow = 'none';
+  }
+
+  // ❌ Remove navbar
+  const nav = element.querySelector('.site-nav');
+  if (nav) nav.remove();
 
   // ❌ Remove social links
   const social = element.querySelector('.social-links');
@@ -34,17 +45,15 @@ function downloadPDF() {
   const socialList = element.querySelector('.social-media-list');
   if (socialList) socialList.remove();
 
-  // ❌ Remove button itself
+  // ❌ Remove button
   const btn = element.querySelector('#printBtn');
   if (btn) btn.remove();
 
   const opt = {
     margin: [10, 10, 10, 10],
     filename: document.title.replace(/\s+/g, '_') + '.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    pagebreak: { mode: ['css', 'legacy'] }
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   };
 
   html2pdf().set(opt).from(element).save();
