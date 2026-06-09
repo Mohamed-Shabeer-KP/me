@@ -57,7 +57,7 @@ minima:
       url: "https://www.linkedin.com/in/mohamed-shabeer-kp/"    
     - title: Print Page
       icon: print
-      url: "javascript:window.print()"
+      url: "/print.html"
 
 
   #   Hide syndication feed subscription link.
