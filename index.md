@@ -86,3 +86,5 @@ Master’s Degree in Computer Applications, [Amrita University](https://www.amri
 
 - Experience with AI-assisted development workflows  
 - Interest in software architecture and system design  
+
+Print this page</a>
