@@ -50,10 +50,10 @@ minima:
   #       * url      Full URL of social profile.
   social_links:
     - title: Email
-      icon: at
-      url: "mohamedshabeerkp@gmail.com"
+      icon: envelope
+      url: "mailto:mohamedshabeerkp@gmail.com"
     - title: Phone
-      icon: phone
+      icon: square-phone
       url: "tel:917025257580"
     - title: Gihub Profile
       icon: github
