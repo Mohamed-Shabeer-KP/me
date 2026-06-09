@@ -70,46 +70,6 @@ function downloadPDF() {
 </script>
 
 <!-- ✅ Print/PDF styling -->
-<style>
- /* ❌ Remove ONLY the grey bar + divider */@media print {
-  .site-header {
-    border-top: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-  }
 
-  /* ❌ Remove navbar/menu only */
-  .site-nav {
-    display: none !important;
-  }
-
-  /* ❌ Remove social links */
-  .social-links,
-  .social-media-list {
-    display: none !important;
-  }
-
-  /* ❌ Remove download button */
-  #printBtn {
-    display: none !important;
-  }
-
-  /* ✅ Prevent breaking inside text blocks */
-  p, li {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  /* ✅ Keep headings with content */
-  h1, h2, h3 {
-    page-break-after: avoid;
-  }
-
-  /* ✅ Avoid breaking sections */
-  .home, .page-content, .wrapper {
-    page-break-inside: avoid;
-  }
-}
-</style>
 
 
