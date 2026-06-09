@@ -2,10 +2,9 @@ title: Mohamed Shabeer K P
 author:
   name: Mohamed Shabeer K P
   email: mohamedshabeerkp@gmail.com
-  phone: 917025257580
-
+  
 description: >
-    
+  +91 7025257580
 
 remote_theme: "jekyll/minima@1e8a445"
 
@@ -50,12 +49,6 @@ minima:
   #       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
   #       * url      Full URL of social profile.
   social_links:
-    - title: Email
-      icon: at
-      url: "mailto:mohamedshabeerkp@gmail.com"
-    - title: Phone
-      icon: mobile
-      url: "tel:+917025257580"
     - title: Gihub Profile
       icon: github
       url: "https://github.com/Mohamed-Shabeer-KP"
