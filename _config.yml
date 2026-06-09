@@ -49,6 +49,12 @@ minima:
   #       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
   #       * url      Full URL of social profile.
   social_links:
+    - title: Email
+      icon: at
+      url: "mohamedshabeerkp@gmail.com"
+    - title: Phone
+      icon: phone
+      url: "tel:917025257580"
     - title: Gihub Profile
       icon: github
       url: "https://github.com/Mohamed-Shabeer-KP"
