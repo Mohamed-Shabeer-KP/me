@@ -1,85 +1,75 @@
 <!-- ✅ html2pdf -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
-<!-- 🌙 THEME TOGGLE SWITCH -->
-<label id="themeToggle"
-  style="
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
-    width: 120px;
-    height: 40px;
-    z-index: 1000;
+<!-- ✅ FLOATING CONTROLS -->
+<div style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+">
+
+  <!-- 🌙 DARK MODE TOGGLE -->
+  <label style="
+    width: 100px;
+    height: 36px;
+    position: relative;
+    display: block;
     cursor: pointer;
   ">
+    <input type="checkbox" id="themeCheckbox" style="display:none;" onchange="toggleDarkMode()">
 
-  <input type="checkbox" id="themeCheckbox" style="display:none;" onchange="toggleDarkMode()">
-
-  <div id="toggleTrack"
-    style="
+    <span id="toggleTrack" style="
+      background: #ccc;
+      border-radius: 20px;
+      position: absolute;
       width: 100%;
       height: 100%;
-      background: #ccc;
-      border-radius: 30px;
-      position: relative;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      font-size: 16px;
-    ">
+      transition: background 0.3s ease;
+    "></span>
 
-    <span>☀</span>
+    <span id="toggleCircle" style="
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: white;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      transition: transform 0.3s ease;
+    "></span>
+  </label>
 
-    <span id="toggleCircle"
-      style="
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        background: white;
-        border-radius: 50%;
-        left: 6px;
-        top: 6px;
-        transition: 0.3s;
-      ">
-    </span>
+  <!-- ⬇ DOWNLOAD BUTTON -->
+  <a href="#" onclick="downloadPDF(); return false;" id="printBtn"
+     style="
+       width: 100px;
+       text-align: center;
+       background: #34495e;
+       color: #fff;
+       padding: 10px;
+       border-radius: 6px;
+       text-decoration: none;
+       font-size: 14px;
+       transition: background 0.3s ease;
+     ">
+    ⬇ Download
+  </a>
 
-    <span>🌙</span>
-  </div>
-</label>
-
-<!-- ✅ DOWNLOAD BUTTON -->
-<a href="#" onclick="downloadPDF(); return false;" id="printBtn"
-  style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 120px;
-    height: 40px;
-    line-height: 20px;
-    text-align: center;
-    background: #2c3e50;
-    color: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    z-index: 1000;
-  ">
-  ⬇ Download
-</a>
+</div>
 
 <!-- ✅ SCRIPT -->
 <script>
 
-// ✅ PDF DOWNLOAD
+// ✅ DOWNLOAD PDF
 function downloadPDF() {
 
   const element = document.body.cloneNode(true);
 
-  // Remove grey bar
+  // remove grey bar
   const header = element.querySelector('.site-header');
   if (header) {
     header.style.borderTop = 'none';
@@ -87,28 +77,27 @@ function downloadPDF() {
     header.style.boxShadow = 'none';
   }
 
-  // Remove navbar
+  // remove navbar
   const nav = element.querySelector('.site-nav');
   if (nav) nav.remove();
 
-  // Remove social links
+  // remove socials
   const social = element.querySelector('.social-links');
   if (social) social.remove();
 
   const socialList = element.querySelector('.social-media-list');
   if (socialList) socialList.remove();
 
-  // Remove buttons
+  // remove controls
   const btn = element.querySelector('#printBtn');
   if (btn) btn.remove();
 
-  const toggle = element.querySelector('#themeToggle');
+  const toggle = element.querySelector('#themeCheckbox');
   if (toggle) toggle.remove();
 
   const opt = {
     margin: [10, 10, 10, 10],
     filename: "Mohamed_Shabeer_Resume.pdf",
-    image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
     jsPDF: {
       unit: 'px',
@@ -121,19 +110,19 @@ function downloadPDF() {
 }
 
 
-// ✅ THEME TOGGLE
+// ✅ TOGGLE DARK MODE
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 
   const isDark = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  updateToggleUI();
+  updateToggle();
 }
 
 
-// ✅ UPDATE TOGGLE UI
-function updateToggleUI() {
+// ✅ UPDATE TOGGLE POSITION
+function updateToggle() {
   const circle = document.getElementById("toggleCircle");
   const track = document.getElementById("toggleTrack");
   const checkbox = document.getElementById("themeCheckbox");
@@ -141,7 +130,7 @@ function updateToggleUI() {
   const isDark = document.body.classList.contains("dark-mode");
 
   if (isDark) {
-    circle.style.transform = "translateX(80px)";
+    circle.style.transform = "translateX(56px)";
     track.style.background = "#4caf50";
     checkbox.checked = true;
   } else {
@@ -152,23 +141,15 @@ function updateToggleUI() {
 }
 
 
-// ✅ LOAD THEME (AUTO)
+// ✅ LOAD THEME
 window.onload = function () {
 
-  // Auto detect system theme (if no saved value)
-  if (!localStorage.getItem("theme")) {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (prefersDark) {
-      document.body.classList.add("dark-mode");
-    }
-  }
-
-  // Load saved theme
+  // load saved theme
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
   }
 
-  updateToggleUI();
+  updateToggle();
 };
 
 </script>
@@ -176,22 +157,22 @@ window.onload = function () {
 <!-- ✅ STYLES -->
 <style>
 
-/* ✅ SMOOTH TRANSITION */
+/* ✅ SMOOTH FADE */
 body {
-  transition: background 0.3s, color 0.3s;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-/* ✅ PURE DARK MODE (no grey anywhere) */
+/* ✅ PURE DARK MODE */
 body.dark-mode,
 body.dark-mode .site-header,
 body.dark-mode .site-footer,
 body.dark-mode .page-content,
 body.dark-mode .wrapper {
-  background: #000 !important;
+  background-color: #000 !important;
   color: #e0e0e0 !important;
 }
 
-/* ✅ TEXT */
+/* ✅ HEADINGS */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
@@ -214,26 +195,10 @@ body.dark-mode .social-media-list i {
   color: #ccc;
 }
 
-/* ✅ REMOVE GREY BAR IN PRINT */
+/* ✅ PRINT CLEANUP */
 @media print {
-
-  .site-header {
-    border-top: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-  }
-
-  .site-nav {
-    display: none !important;
-  }
-
-  .social-links,
-  .social-media-list {
-    display: none !important;
-  }
-
   #printBtn,
-  #themeToggle {
+  input[type="checkbox"] {
     display: none !important;
   }
 }
