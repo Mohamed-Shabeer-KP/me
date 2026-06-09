@@ -55,10 +55,6 @@ minima:
     - title: LinkedIn Profile
       icon: linkedin-in
       url: "https://www.linkedin.com/in/mohamed-shabeer-kp/"    
-    - title: Print Page
-      icon: print
-      url: "/print.html"
-
 
   #   Hide syndication feed subscription link.
   #     RSS / Atom feed link is always rendered as the last item of social-links
