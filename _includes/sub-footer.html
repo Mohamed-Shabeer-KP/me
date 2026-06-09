@@ -53,22 +53,14 @@ function downloadPDF() {
 
 <!-- ✅ Print/PDF styling -->
 <style>
-@media print {
-
-  /* ✅ Remove grey top bar and bottom border */
+ /* ❌ Remove ONLY the grey bar + divider */@media print {
   .site-header {
     border-top: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
   }
 
-  /* ✅ Remove extra spacing from navbar */
-  .site-header .wrapper {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  /* ✅ Hide only navbar-specific elements if any exist */
+  /* ❌ Remove navbar/menu only */
   .site-nav {
     display: none !important;
   }
@@ -79,9 +71,11 @@ function downloadPDF() {
     display: none !important;
   }
 
-  /* ❌ Remove button */
+  /* ❌ Remove download button */
   #printBtn {
     display: none !important;
   }
 }
 </style>
+
+
