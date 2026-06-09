@@ -84,6 +84,23 @@ function downloadPDF() {
   #printBtn {
     display: none !important;
   }
+
+  /* ✅ Prevent breaking inside text blocks */
+  p, li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ✅ Keep headings with content */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* ✅ Avoid breaking sections */
+  .home, .page-content, .wrapper {
+    page-break-inside: avoid;
+  }
+
 }
 </style>
 
