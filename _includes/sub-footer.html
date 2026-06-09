@@ -71,5 +71,30 @@ function downloadPDF() {
 
 <!-- ✅ Print/PDF styling -->
 
+<style>
+ /* ❌ Remove ONLY the grey bar + divider */
+@media print {
+  .site-header {
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
 
+  /* ❌ Remove navbar/menu only */
+  .site-nav {
+    display: none !important;
+  }
+
+  /* ❌ Remove social links */
+  .social-links,
+  .social-media-list {
+    display: none !important;
+  }
+
+  /* ❌ Remove download button */
+  #printBtn {
+    display: none !important;
+  }
+}
+</style>
 
