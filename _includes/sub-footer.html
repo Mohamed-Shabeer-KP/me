@@ -27,26 +27,6 @@ function downloadPDF() {
   // ✅ Clone full page
   const element = document.body.cloneNode(true);
 
-  // ✅ Keep only site-title from header
-  const header = element.querySelector('.site-header');
-  if (header) {
-    const title = header.querySelector('.site-title');
-
-    if (title) {
-      // Create a simple clean header
-      const newHeader = document.createElement('div');
-      // newHeader.style.textAlign = "center";
-      // newHeader.style.fontSize = "22px";
-      // newHeader.style.fontWeight = "bold";
-      // newHeader.style.marginBottom = "10px";
-      newHeader.innerText = title.innerText;
-
-      header.parentNode.replaceChild(newHeader, header);
-    } else {
-      header.remove();
-    }
-  }
-
   // ❌ Remove social links
   const social = element.querySelector('.social-links');
   if (social) social.remove();
