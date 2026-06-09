@@ -1,6 +1,24 @@
 <!-- ✅ html2pdf library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
+<!-- 🌙 Dark Mode Toggle -->
+<a href="#" onclick="toggleDarkMode(); return false;" id="themeBtn"
+   style="
+     position: fixed;
+     bottom: 70px;
+     right: 20px;
+     background: #555;
+     color: #fff;
+     padding: 10px 16px;
+     border-radius: 6px;
+     text-decoration: none;
+     font-size: 14px;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+     z-index: 1000;
+   ">
+  🌙 Dark Mode
+</a>
+
 <!-- ✅ Download PDF Button -->
 <a href="#" onclick="downloadPDF(); return false;" id="printBtn"
    style="
@@ -20,13 +38,13 @@
 </a>
 
 <!-- ✅ Script -->
-
 <script>
+// ✅ PDF Download
 function downloadPDF() {
 
   const element = document.body.cloneNode(true);
 
-  // ✅ Remove grey bar (IMPORTANT FIX)
+  // ✅ Remove grey bar
   const header = element.querySelector('.site-header');
   if (header) {
     header.style.borderTop = 'none';
@@ -45,42 +63,103 @@ function downloadPDF() {
   const socialList = element.querySelector('.social-media-list');
   if (socialList) socialList.remove();
 
-  // ❌ Remove button
+  // ❌ Remove buttons
   const btn = element.querySelector('#printBtn');
   if (btn) btn.remove();
 
+  const themeBtn = element.querySelector('#themeBtn');
+  if (themeBtn) themeBtn.remove();
+
   const opt = {
-  margin: [10, 10, 10, 10],
-  filename: document.title.replace(/\s+/g, '_') + '.pdf',
-  image: { type: 'jpeg', quality: 0.98 },
-  html2canvas: { 
-    scale: 2,
-    useCORS: true,
-    scrollY: 0   // ✅ important for full rendering
-  },
-  jsPDF: { 
-    unit: 'px',
-    format: [document.body.scrollWidth, document.body.scrollHeight], // ✅ full height
-    orientation: 'portrait'
-  }
-};
+    margin: [10, 10, 10, 10],
+    filename: document.title.replace(/\s+/g, '_') + '.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { 
+      scale: 2,
+      useCORS: true,
+      scrollY: 0
+    },
+    jsPDF: { 
+      unit: 'px',
+      format: [document.body.scrollWidth, document.body.scrollHeight],
+      orientation: 'portrait'
+    }
+  };
 
   html2pdf().set(opt).from(element).save();
 }
+
+
+// ✅ Dark Mode Toggle
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+
+  updateThemeButton();
+}
+
+// ✅ Update button text
+function updateThemeButton() {
+  const btn = document.getElementById("themeBtn");
+  if (!btn) return;
+
+  if (document.body.classList.contains("dark-mode")) {
+    btn.innerText = "☀ Light Mode";
+  } else {
+    btn.innerText = "🌙 Dark Mode";
+  }
+}
+
+// ✅ Load saved theme
+window.onload = function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+  updateThemeButton();
+};
 </script>
 
-<!-- ✅ Print/PDF styling -->
-
+<!-- ✅ Styles -->
 <style>
- /* ❌ Remove ONLY the grey bar + divider */
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .site-header,
+body.dark-mode .site-footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #ffffff;
+}
+
+/* ✅ Print rules */
 @media print {
+
+  /* ❌ Remove grey bar */
   .site-header {
     border-top: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
   }
 
-  /* ❌ Remove navbar/menu only */
+  /* ❌ Remove navbar */
   .site-nav {
     display: none !important;
   }
@@ -91,10 +170,11 @@ function downloadPDF() {
     display: none !important;
   }
 
-  /* ❌ Remove download button */
-  #printBtn {
+  /* ❌ Remove buttons */
+  #printBtn,
+  #themeBtn {
     display: none !important;
   }
 }
-</style>
 
+</style>
