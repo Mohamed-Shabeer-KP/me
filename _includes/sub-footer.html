@@ -36,9 +36,9 @@ function downloadPDF() {
       // Create a simple clean header
       const newHeader = document.createElement('div');
       // newHeader.style.textAlign = "center";
-      // newHeader.style.fontSize = "22px";
-      // newHeader.style.fontWeight = "bold";
-      // newHeader.style.marginBottom = "10px";
+      newHeader.style.fontSize = "22px";
+      newHeader.style.fontWeight = "bold";
+      newHeader.style.marginBottom = "10px";
       newHeader.innerText = title.innerText;
 
       header.parentNode.replaceChild(newHeader, header);
