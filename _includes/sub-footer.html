@@ -48,9 +48,20 @@ function downloadPDF() {
 <!-- ✅ Hide button + unwanted elements in PDF -->
 <style>
 @media print {
-  #printBtn,
-  nav {
+  /* ❌ Hide PDF button */
+  #printBtn {
+    display: none !important;
+  }
+
+  /* ✅ KEEP header & footer (so no display:none here) */
+
+  /* ❌ Hide social links (Minima specific) */
+  .social-media-list,
+  .footer-col ul,
+  .footer-col-2,
+  .footer-col-3 {
     display: none !important;
   }
 }
 </style>
+
