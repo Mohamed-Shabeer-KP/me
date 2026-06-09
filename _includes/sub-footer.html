@@ -1,33 +1,32 @@
-<!-- ✅ html2pdf -->
+<!-- ✅ html2pdf library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
-  <!-- ⬇ DOWNLOAD BUTTON -->
-  <a href="#" onclick="downloadPDF(); return false;" id="printBtn"
-     style="
-       width: 100px;
-       text-align: center;
-       background: #34495e;
-       color: #fff;
-       padding: 10px;
-       border-radius: 6px;
-       text-decoration: none;
-       font-size: 14px;
-       transition: background 0.3s ease;
-     ">
-    ⬇ Download
-  </a>
+<!-- ✅ Download PDF Button -->
+<a href="#" onclick="downloadPDF(); return false;" id="printBtn"
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background: #2c3e50;
+     color: #fff;
+     padding: 10px 16px;
+     border-radius: 6px;
+     text-decoration: none;
+     font-size: 14px;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+     z-index: 1000;
+   ">
+  ⬇ Download
+</a>
 
-</div>
+<!-- ✅ Script -->
 
-<!-- ✅ SCRIPT -->
 <script>
-
-// ✅ DOWNLOAD PDF
 function downloadPDF() {
 
   const element = document.body.cloneNode(true);
 
-  // remove grey bar
+  // ✅ Remove grey bar (IMPORTANT FIX)
   const header = element.querySelector('.site-header');
   if (header) {
     header.style.borderTop = 'none';
@@ -35,46 +34,66 @@ function downloadPDF() {
     header.style.boxShadow = 'none';
   }
 
-  // remove navbar
+  // ❌ Remove navbar
   const nav = element.querySelector('.site-nav');
   if (nav) nav.remove();
 
-  // remove socials
+  // ❌ Remove social links
   const social = element.querySelector('.social-links');
   if (social) social.remove();
 
   const socialList = element.querySelector('.social-media-list');
   if (socialList) socialList.remove();
 
-  // remove controls
+  // ❌ Remove button
   const btn = element.querySelector('#printBtn');
   if (btn) btn.remove();
 
   const opt = {
-    margin: [10, 10, 10, 10],
-    filename: "Mohamed_Shabeer_Resume.pdf",
-    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: {
-      unit: 'px',
-      format: [document.body.scrollWidth, document.body.scrollHeight],
-      orientation: 'portrait'
-    }
-  };
+  margin: [10, 10, 10, 10],
+  filename: document.title.replace(/\s+/g, '_') + '.pdf',
+  image: { type: 'jpeg', quality: 0.98 },
+  html2canvas: { 
+    scale: 2,
+    useCORS: true,
+    scrollY: 0   // ✅ important for full rendering
+  },
+  jsPDF: { 
+    unit: 'px',
+    format: [document.body.scrollWidth, document.body.scrollHeight], // ✅ full height
+    orientation: 'portrait'
+  }
+};
 
   html2pdf().set(opt).from(element).save();
 }
-
 </script>
 
-<!-- ✅ STYLES -->
-<style>
+<!-- ✅ Print/PDF styling -->
 
-/* ✅ PRINT CLEANUP */
+<style>
+ /* ❌ Remove ONLY the grey bar + divider */
 @media print {
-  #printBtn,
-  input[type="checkbox"] {
+  .site-header {
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+  /* ❌ Remove navbar/menu only */
+  .site-nav {
+    display: none !important;
+  }
+
+  /* ❌ Remove social links */
+  .social-links,
+  .social-media-list {
+    display: none !important;
+  }
+
+  /* ❌ Remove download button */
+  #printBtn {
     display: none !important;
   }
 }
-
 </style>
